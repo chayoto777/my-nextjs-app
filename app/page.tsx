@@ -12,7 +12,7 @@ export default function Home() {
     if (isLoggedIn) {
       router.push('/dashboard');
     } else {
-      router.push('./pages/login');
+      router.push('/login');
     }
   }, [router]);
 
