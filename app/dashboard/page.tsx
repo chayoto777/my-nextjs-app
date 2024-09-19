@@ -53,6 +53,7 @@ export default function Dashboard() {
     fetchUsers();
   }, []);
 
+  // Filter users based on search input
   useEffect(() => {
     setFilteredUsers(
       users.filter((user) =>
@@ -121,7 +122,7 @@ export default function Dashboard() {
           placeholder="Search users..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full p-4 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+          className="w-full p-4 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition text-black"
         />
 
         <ul className="space-y-4">
@@ -131,12 +132,12 @@ export default function Dashboard() {
                 key={user.id}
                 className="bg-gray-100 p-4 rounded-lg shadow hover:bg-gray-200 transition transform hover:scale-105 hover:shadow-lg"
               >
-                <div className="text-lg font-semibold">{user.name}</div>
-                <div className="text-gray-600">{user.email}</div>
+                <div className="text-lg text-black font-semibold">{user.name}</div>
+                <div className="text-black ">{user.email}</div>
               </li>
             ))
           ) : (
-            <li className="text-gray-600 text-center">No users found</li>
+            <li className="text-black text-center">No users found</li>
           )}
         </ul>
 
@@ -144,7 +145,7 @@ export default function Dashboard() {
         <div className="mt-6 flex justify-center space-x-2">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
-            className={`px-4 py-2 rounded-lg border ${currentPage === 1 ? 'cursor-not-allowed opacity-50' : 'hover:bg-gray-200'}`}
+            className={`px-4 py-2 rounded-lg border text-black ${currentPage === 1 ? 'cursor-not-allowed opacity-50' : 'hover:bg-gray-200'}`}
             disabled={currentPage === 1}
           >
             Previous
@@ -153,14 +154,14 @@ export default function Dashboard() {
             <button
               key={index + 1}
               onClick={() => handlePageChange(index + 1)}
-              className={`px-4 py-2 rounded-lg border ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'}`}
+              className={`px-4 py-2 rounded-lg border text-black ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'}`}
             >
               {index + 1}
             </button>
           ))}
           <button
             onClick={() => handlePageChange(currentPage + 1)}
-            className={`px-4 py-2 rounded-lg border ${currentPage === totalPages ? 'cursor-not-allowed opacity-50' : 'hover:bg-gray-200'}`}
+            className={`px-4 py-2 rounded-lg border text-black ${currentPage === totalPages ? 'cursor-not-allowed opacity-50' : 'hover:bg-gray-200'}`}
             disabled={currentPage === totalPages}
           >
             Next
