@@ -9,17 +9,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 To get started with the project locally, follow these steps:
 
 1. Clone the repository:
-   \`\`\`bash
+   bash
    git clone https://github.com/chayoto777/my-nextjs-app.git
-   \`\`\`
 
 2. Navigate into the project directory:
-   \`\`\`bash
+   bash
    cd your-project
-   \`\`\`
 
 3. Install the dependencies:
-   \`\`\`bash
+   bash
    npm install
 
    # or
@@ -33,10 +31,9 @@ To get started with the project locally, follow these steps:
    # or
 
    bun install
-   \`\`\`
 
 4. Run the development server:
-   \`\`\`bash
+   bash
    npm run dev
 
    # or
@@ -50,7 +47,6 @@ To get started with the project locally, follow these steps:
    # or
 
    bun dev
-   \`\`\`
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
