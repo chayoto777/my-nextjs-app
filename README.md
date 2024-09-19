@@ -1,36 +1,87 @@
+# Next.js Dashboard Project
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+### Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To get started with the project locally, follow these steps:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/chayoto777/my-nextjs-app.git
+   \`\`\`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Navigate into the project directory:
+   \`\`\`bash
+   cd your-project
+   \`\`\`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Install the dependencies:
+   \`\`\`bash
+   npm install
 
-## Learn More
+   # or
 
-To learn more about Next.js, take a look at the following resources:
+   yarn install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   # or
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   pnpm install
 
-## Deploy on Vercel
+   # or
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   bun install
+   \`\`\`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Run the development server:
+   \`\`\`bash
+   npm run dev
+
+   # or
+
+   yarn dev
+
+   # or
+
+   pnpm dev
+
+   # or
+
+   bun dev
+   \`\`\`
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Using the App
+
+The application is designed with mock login functionality. **To access the dashboard, you must use the following credentials:**
+
+- **Username**: `admin`
+- **Password**: `password123`
+
+These are mock user credentials meant for testing and development purposes only.
+
+Upon successful login, you'll be able to interact with the dashboard, which fetches user data from a mock API (JSONPlaceholder).
+
+### Mock API
+
+The user data is fetched from the public API provided by [JSONPlaceholder](https://jsonplaceholder.typicode.com/users). This is a free online REST API used for testing and prototyping.
+
+- The API used in this project: `https://jsonplaceholder.typicode.com/users`
+- The dashboard fetches mock user data, and you can search for users or view a paginated list of users (showing 3 users per page).
+
+The users fetched from this API are used to demonstrate pagination, search functionality, and UI elements in the dashboard.
+
+### Login Flow
+
+The login functionality is basic and checks for the specific username and password (`admin` and `password123`). If you do not use these credentials, you will not be able to access the dashboard.
+
+- If you log in successfully, the login state is stored in the browser's `localStorage`, allowing you to stay logged in until you manually log out.
+- If you attempt to access the dashboard without logging in, you will be redirected back to the login page.
+
+### How to Logout
+
+- You can log out by clicking the "Logout" button in the top-right corner of the dashboard.
+- Logging out will remove the login state from `localStorage` and redirect you back to the login page.
